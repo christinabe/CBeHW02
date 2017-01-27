@@ -146,6 +146,7 @@
 				TargetAttributes = {
 					7ED3225D1E34184A0016052F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 47T83WP8UV;
 						ProvisioningStyle = Automatic;
 					};
 					7ED322711E34184A0016052F = {
@@ -339,7 +340,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 47T83WP8UV;
 				INFOPLIST_FILE = "fml this better be right/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it-s-lit.fml-this-better-be-right";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,7 +354,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 47T83WP8UV;
 				INFOPLIST_FILE = "fml this better be right/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it-s-lit.fml-this-better-be-right";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -406,6 +411,7 @@
 				7ED3227D1E34184A0016052F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7ED3227E1E34184A0016052F /* Build configuration list for PBXNativeTarget "fml this better be rightTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +420,7 @@
 				7ED322801E34184A0016052F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

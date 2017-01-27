@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,37 +22,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLT-IV-p0H">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLT-IV-p0H">
                                 <rect key="frame" x="73" y="28" width="229" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="BE3-y2-aLv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="dLr-bY-JHe">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="dLr-bY-JHe">
                                 <rect key="frame" x="16" y="169" width="343" height="478"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85u-aE-1t5">
-                                <rect key="frame" x="135" y="143" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85u-aE-1t5">
+                                <rect key="frame" x="255" y="137" width="104" height="30"/>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jkX-01-Li3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rng-YI-DvH">
+                                <rect key="frame" x="16" y="142" width="85" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="w3f-oi-jGs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyp-SJ-lc4">
+                                <rect key="frame" x="116" y="136" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="314-kT-2OB"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cyp-SJ-lc4" firstAttribute="leading" secondItem="Rng-YI-DvH" secondAttribute="trailing" constant="15" id="0vp-1S-5cs"/>
+                            <constraint firstItem="VLT-IV-p0H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="57" id="2L0-KK-gbH"/>
+                            <constraint firstItem="Rng-YI-DvH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4Ov-vT-r3e"/>
+                            <constraint firstItem="cyp-SJ-lc4" firstAttribute="centerY" secondItem="85u-aE-1t5" secondAttribute="centerY" id="5a3-Tw-XYs"/>
+                            <constraint firstItem="cyp-SJ-lc4" firstAttribute="bottom" secondItem="85u-aE-1t5" secondAttribute="bottom" id="8eK-ry-EFW"/>
+                            <constraint firstItem="85u-aE-1t5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="J2I-fI-fJj"/>
+                            <constraint firstItem="VLT-IV-p0H" firstAttribute="centerX" secondItem="dLr-bY-JHe" secondAttribute="centerX" id="Lmu-JT-zuq"/>
+                            <constraint firstItem="dLr-bY-JHe" firstAttribute="top" secondItem="cyp-SJ-lc4" secondAttribute="bottom" constant="2" id="cKL-pD-QB1"/>
+                            <constraint firstItem="Rng-YI-DvH" firstAttribute="centerY" secondItem="cyp-SJ-lc4" secondAttribute="centerY" id="dTw-64-4Bs"/>
+                            <constraint firstItem="cyp-SJ-lc4" firstAttribute="top" secondItem="VLT-IV-p0H" secondAttribute="bottom" constant="1" id="gRa-I7-IbI"/>
+                            <constraint firstItem="VLT-IV-p0H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="hfZ-VQ-7p5"/>
+                            <constraint firstItem="Rng-YI-DvH" firstAttribute="top" secondItem="VLT-IV-p0H" secondAttribute="bottom" constant="7" id="kFd-bp-Ytc"/>
+                            <constraint firstItem="85u-aE-1t5" firstAttribute="trailing" secondItem="dLr-bY-JHe" secondAttribute="trailing" id="mWZ-bN-Mf1"/>
+                            <constraint firstAttribute="bottom" secondItem="dLr-bY-JHe" secondAttribute="bottom" constant="20" symbolic="YES" id="pcV-x4-cMP"/>
+                            <constraint firstItem="Rng-YI-DvH" firstAttribute="leading" secondItem="dLr-bY-JHe" secondAttribute="leading" id="s9b-Xe-tw6"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="awesomeImage" destination="dLr-bY-JHe" id="KYa-cg-Pwk"/>
                         <outlet property="messageButton" destination="85u-aE-1t5" id="txM-Lj-EBz"/>
                         <outlet property="messageLabel" destination="VLT-IV-p0H" id="OoD-yy-o6M"/>
+                        <outlet property="soundSwitch" destination="cyp-SJ-lc4" id="8KY-pF-6c3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="136.28185907046478"/>
+            <point key="canvasLocation" x="-79" y="117"/>
         </scene>
     </scenes>
     <resources>
